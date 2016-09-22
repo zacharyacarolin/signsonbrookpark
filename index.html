@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+<head>
+<meta charset="utf-8">
+<title>SIGNS ON BROOKPARK ESTIMATOR</title>
+<name>
+<script src="SpryAssets/SpryEffects.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_jumpMenuGo(objId,targ,restore){ //v9.0
+  var selObj = null;  with (document) { 
+  if (getElementById) selObj = getElementById(objId);
+  if (selObj) eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0; }
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function MM_setTextOfTextfield(objId,x,newText) { //v9.0
+  with (document){ if (getElementById){
+    var obj = getElementById(objId);} if (obj) obj.value = newText;
+  }
+}
+function MM_effectGrowShrink(targetElement, duration, from, to, toggle, referHeight, growFromCenter)
+{
+	Spry.Effect.DoGrow(targetElement, {duration: duration, from: from, to: to, toggle: toggle, referHeight: referHeight, growCenter: growFromCenter});
+}
+function MM_effectShake(targetElement)
+{
+	Spry.Effect.DoShake(targetElement);
+}
+function MM_effectBlind(targetElement, duration, from, to, toggle)
+{
+	Spry.Effect.DoBlind(targetElement, {duration: duration, from: from, to: to, toggle: toggle});
+}
+</script>
+SOB ESTIMATOR</name>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function KW_getVal(o){ //v1.2
+	var retVal="0";if (o.type=="select-one")
+	{retVal=(o.selectedIndex==-1)?0:o.options[o.selectedIndex].value;}
+	else if (o.length>1){for (var i=0;i<o.length;i++) if (o[i].checked) retVal=o[i].value;
+	} else if (o.type=="checkbox") {retVal=(o.checked)?o.value:0;} else {
+	retVal=Number(o.value)}return parseFloat(retVal);
+}
+
+function KW_calcForm() { //v1.2
+	var str="",a=KW_calcForm.arguments; for (var i=3;i<a.length;i++)
+	str+=(a[i].indexOf("#")==-1)?a[i]:KW_getVal(MM_findObj(a[i].substring(1)));
+	t=Math.round(a[1]*eval(str))/a[1];tS=t.toString();if(a[2]>0){tSp=tS.indexOf(".");
+	if(tSp==-1)	tS+=".";tSp=tS.indexOf(".");while(tSp!=(tS.length-1-a[2])){tS+="0";
+	tSp=tS.indexOf(".");}} MM_findObj(a[0]).value=tS;
+}
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+</script>
+<script type="text/javascript">
+var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+if(nyear<1000) nyear+=1900;
+
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+</head> 
+<body> 
+<div data-role="page" id="page">
+	<div data-role="header">
+		<center><img src="logo.png" width="192" height="192" alt="logo"></center>
+		<h1>SOB ESTIMATOR<BR> TM 2016</h1>
+	</div>		
+            <div data-role="content">	
+				<ul data-role="listview">
+					   	
+                        
+                    
+                    <input name="login" type="button" onClick="MM_goToURL('parent','#page2');MM_setTextOfTextfield('estimator','','name');return document.MM_returnValue" value="PSL AND VINYL" >
+                    <input name="login" type="button" onClick="MM_goToURL('parent','#page3');MM_setTextOfTextfield('estimator','','name');return document.MM_returnValue" value="SUBSTRATES" >
+                    
+                </ul>
+            </div>
+    <div data-role="footer">
+	 		<H4><div id="clockbox">
+                    	</div></H4>
+  </div>
+</div>
+
+</div>
+<div data-role="page" id="page2">
+<div data-role="header">
+		<center><img src="logo.png" width="192" height="192" alt="logo"></center>
+			<h1>SOB ESTIMATOR
+			<br>
+			TM 2016</h1>
+	</div>
+    	<br>
+<div data-role="header">
+		<h1>VINYL AND DECALS</h1>
+	</div>
+	<div data-role="content">	
+<form action="mailto:signsonbrookpark@yahoo.com" method="post" name="ESTIMATE FROM APP" target="new">
+		<ul data-add-back-btn="false" data-role="listview">
+		    <h3>HEIGHT</h3>
+
+            	<input name="height" type="text" id="height" value="12" onBlur="KW_calcForm('PSL',100,2,'(','#height','/','12',')','*','(','#length','/','12',')','*','#MATERIAL')">
+            <h3>LENGTH</h3>
+            <input name="length" type="text" value="12" id="length" onBlur="KW_calcForm('PSL',100,2,'(','#height','/','12',')','*','(','#length','/','12',')','*','#MATERIAL')">
+            <select name="MATERIAL" id="MATERIAL">
+              <option value="9.00">PSL</option>
+              <option value="6.00">BANNER</option>
+              <option value="7.95">DIGITAL VINYL</option>
+              <option value="8.50">WINDOW FILM</option>
+              <option value="4.95">DIGITAL PAPER</option>
+              <option value="15.50">4 COLOR EDGE</option>
+              <option value="12.50">1 COLOR EDGE</option>
+            </select>
+          <input name="CALC" type="button" onClick="KW_calcForm('PSL',100,2,'(','#height','/','12',')','*','(','#length','/','12',')','*','#MATERIAL');MM_effectShake('page2')" value="ESTIMATE FOR ME!">
+            <H3>ESTIMATED PRICE</H3>
+            <input name="PSL" type="text" value="$0.00" id="PSL" onBlur="KW_calcForm('PSL',100,2,'(','#height','/','12',')','*','(','#length','/','12',')','*','#MATERIAL')">
+             
+            
+	  	
+ 		</ul>
+  </form>
+<br>
+  <input name="login" type="button" onClick="MM_goToURL('parent','#page');MM_setTextOfTextfield('estimator','','name');return document.MM_returnValue" value="HOME" >
+    </div>
+<a href="tel: 12166612222"><input name="CALL BUTTON" type="button"  value="CALL THE SHOP"></a>
+<br>
+	 
+  <center>
+     <h3><color="#00000">SOB Estimator for SIGNS ON BROOKPARK</h3>
+     <H5><font size="">ALL PRICES IN THIS APP ARE ONLY FOR ESTIMATED PURPOSES<BR>
+     NOT ALL ARE ACCURATE AND OR CORRECT</font></H5>
+     <h6>SOB Estimator CREATED BY ZACHARY A CAROLIN</h6>
+  </center></color>
+  		 <br>
+   
+<div data-role="footer">
+		<H4><div id="clockbox">
+        </div></H4>
+    </div>
+</div>
+
+<div data-role="page" id="page3">
+<div data-role="header">
+		<center><img src="logo.png" width="192" height="192" alt="logo"></center>
+		<h1>SOB ESTIMATOR
+		<br>
+		TM 2016</h1>
+	</div>
+    	<br>
+<div data-role="header">
+		 <H1>SUBSTRATES</H1>
+    </div>
+
+<div data-role="content">	
+		<ul data-add-back-btn="false" data-role="listview">
+<form action="mailto:signsonbrookpark@yahoo.com" method="post" name="ESTIMATE FROM APP" target="new">
+
+<select name="substrate" id="substrate">
+        <option value="0" selected>SUBSTRATES</option>
+        <option value="18.90">CORO 12x18</option>
+        <option value="27.20">CORO 18x24</option>
+        <option value="48.30">CORO 24x36</option>
+        <option value="84.00">CORO 36x48</option>
+        <option value="135.00">CORO 48x96</option>
+        
+        <option value="35.20">MAX METAL 12x18</option>
+        <option value="52.50">MAX METAL 18x24</option>
+        <option value="92.40">MAX METAL 24x36</option>
+        <option value="173.30">MAX METAL 36x48</option>
+        <option value="298.20">MAX METAL 48x96</option>
+        
+        <option value="76.20">LEXAN 18x24</option>
+        <option value="138.60">LEXAN 24x36</option>
+        <option value="183.70">LEXAN 36x48</option>
+        <option value="358.10">LEXAN 48x96</option>
+        
+        
+</select>
+<select name="var" id="var">
+		<option value="0" selected>VARIABLES</option>
+        <option value=".2">SECOND COLOR</option>
+        <option value=".5">DOUBLE SIDE</option>
+        <option value=".7">FULL COLOR</option>
+</select>
+<input name="subprice" type="button" onClick="KW_calcForm('substrate price',100,2,'#substrate','+','(','#substrate','*','#var',')');MM_effectShake('page3')" value="GET SUBSTRATE PRICE">
+   <input name="substrate price" type="text" value="$0.00" id="substrate price" >        
+      </ul>
+
+    </div>
+
+</form>
+  <br>
+  <input name="login" type="button" onClick="MM_goToURL('parent','#page');MM_setTextOfTextfield('estimator','','name');return document.MM_returnValue" value="HOME" >
+
+<br>
+	 <a href="tel: 12166612222"><input name="CALL BUTTON" type="button"  value="CALL THE SHOP"></a>
+     <center>
+     <h3>SOB Estimator for SIGNS ON BROOKPARK</h3>
+     <H5><font size="">ALL PRICES IN THIS APP ARE ONLY FOR ESTIMATED PURPOSES<BR>
+     NOT ALL ARE ACCURATE AND OR CORRECT</font></H5>
+     <h6>SOB Estimator CREATED BY ZACHARY A CAROLIN</h6>
+  </center>
+ <br>
+
+<div data-role="footer">
+ <div data-role="footer">
+		<H4><div id="clockbox">
+    </div></H4></div>
+</div>
+</div>
+
+</body>
+</html>
